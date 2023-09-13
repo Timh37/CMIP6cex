@@ -1,4 +1,6 @@
 .DS_Store
+.pdf
+.ipynb_checkpoints
 **/*.nc
 **/*.addmslp_NEW..npy
 Priestley_tracks/historical_npy/MRI-ESM2-0_19501951_TRACKS_FILTERED_pos.addmslp_NEW.npy
