@@ -30,7 +30,7 @@ def drop_older_versions(cat):
         if isinstance(cat.df.loc[i,'version'],int)==False:
             cat.df.loc[i,'version'] = int(cat.df.loc[i,'version'].replace('v',''))
     #sorting by zstore first to make sure that the newest leap catalogue is used if duplicate datasets with the same version!
-    cat.esmcat._df = cat.df.sort_values(by='zstore', ascending=False).drop_duplicates(subset=['activity_id','institution_id','source_id','experiment_id','member_id','table_id','variable_id','grid_label','version']).sort_index()
+    cat.esmcat._df = cat.df.sort_values(by='prio', ascending=False).drop_duplicates(subset=['activity_id','institution_id','source_id','experiment_id','member_id','table_id','variable_id','grid_label','version']).sort_index()
     cat.esmcat._df = cat.df.sort_values(by='version', ascending=False).drop_duplicates(subset=['activity_id','institution_id','source_id','experiment_id','member_id','table_id','variable_id','grid_label']).sort_index()
     
     return cat
