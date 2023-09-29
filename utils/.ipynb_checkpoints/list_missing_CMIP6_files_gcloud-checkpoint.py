@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-List missing instance_id's on Google cloud compared to ESGF
+List instance_id's on ESGF that are not on Google cloud. This can be used to request new iid's from https://github.com/leap-stc/cmip6-leap-feedstock/issues, for instance.
 
 @author: timhermans
 """

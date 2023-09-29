@@ -2,8 +2,7 @@ from scipy.stats import kendalltau
 from statsmodels.distributions.empirical_distribution import ECDF
 import numpy as np
 
-#to-do: annotate
-def kendallstau(x,y):
+def kendallstau(x,y): #Kendalls correlation coefficient at overlapping indices
     overlap = np.isfinite(x) * np.isfinite(y)
     
     tau = kendalltau(x[overlap],y[overlap])
