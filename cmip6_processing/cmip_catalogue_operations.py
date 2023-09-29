@@ -26,11 +26,16 @@ def drop_vars_from_cat(cmip6_cat,vars_to_drop):
     return cmip6_cat
 
 def drop_older_versions(cat):
-    for i in np.arange(len(cat.df)):
+    '''functionality to drop duplicate datasets if ingesting from multiple catalogues'''
+    
+    for i in np.arange(len(cat.df)): #check if version is an integer or a string prepended with 'v', and change all to integers
         if isinstance(cat.df.loc[i,'version'],int)==False:
             cat.df.loc[i,'version'] = int(cat.df.loc[i,'version'].replace('v',''))
-    #sorting by zstore first to make sure that the newest leap catalogue is used if duplicate datasets with the same version!
-    cat.esmcat._df = cat.df.sort_values(by='zstore', ascending=False).drop_duplicates(subset=['activity_id','institution_id','source_id','experiment_id','member_id','table_id','variable_id','grid_label','version']).sort_index()
+            
+    #sort by catalog priority for duplicate versions and drop duplicates (drop duplicates keeps the first dataset (=highest catalog priority))
+    cat.esmcat._df = cat.df.sort_values(by='prio', ascending=False).drop_duplicates(subset=['activity_id','institution_id','source_id','experiment_id','member_id','table_id','variable_id','grid_label','version']).sort_index()
+    
+    #then sort by version and drop duplicates
     cat.esmcat._df = cat.df.sort_values(by='version', ascending=False).drop_duplicates(subset=['activity_id','institution_id','source_id','experiment_id','member_id','table_id','variable_id','grid_label']).sort_index()
     
     return cat
