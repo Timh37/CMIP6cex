@@ -1,6 +1,7 @@
 .DS_Store
-.pdf
-extreme_analysis/Figures
+*.pdf
+*.jpg
+*.pyc
 **/*.addmslp_NEW..npy
 output
 Priestley_tracks/historical_npy/MRI-ESM2-0_19501951_TRACKS_FILTERED_pos.addmslp_NEW.npy
