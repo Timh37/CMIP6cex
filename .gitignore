@@ -1,4 +1,5 @@
 .DS_Store
+.pdf
 **/*.addmslp_NEW..npy
 output
 Priestley_tracks/historical_npy/MRI-ESM2-0_19501951_TRACKS_FILTERED_pos.addmslp_NEW.npy
