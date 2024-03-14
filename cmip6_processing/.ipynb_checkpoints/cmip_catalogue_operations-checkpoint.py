@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+'''set of functions to manipulate catalogues of CMIP6 data'''
 
 def reduce_cat_to_max_num_realizations(cmip6_cat):
     '''Reduce grid labels in pangeo cmip6 catalogue by 
