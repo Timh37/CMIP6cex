@@ -1,6 +1,7 @@
 import xarray as xr
 import numpy as np
 from collections import defaultdict
+'''set of functions to manipulate dictionaries of CMIP6 datasets'''
 
 def select_period(ddict_in,start_year,end_year):
     '''select time period from datasets in dictionary'''
