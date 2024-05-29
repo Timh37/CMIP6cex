@@ -6,3 +6,7 @@ This repository provides several functionalities to analyze changes in the joint
 Additionally, scripts are provided to analyze (future changes in) the number of joint wind speed and precipitation extremes and joint storm surge and precipitation extremes based on the CMIP6 simulations and their storm surge derivatives and to reproduce the figures in Hermans et al. (under review). The analysis of changes in the number of joint extremes includes the decomposition of future changes into changes due to changes in the marginal distributions of the variables and changes in their dependence and various other steps.
 
 To run the scripts in this repository, users need access to the [LEAP-Pangeo cloud-based computing platform](https://leap-stc.github.io/leap-pangeo/architecture.html) or a similar cloud-computing platform. 
+
+## Publications
+
+[Projecting Changes in the Drivers of Compound Flooding in Europe Using CMIP6 Models (Earth's Future, 2024)](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023EF004188?af=R)
